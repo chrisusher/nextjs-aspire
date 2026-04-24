@@ -17,11 +17,9 @@ async function main(): Promise<void> {
     .addBlobContainer("images", { blobContainerName: "images" });
 
   await builder
-    .addNextJsApp("web", "with-jest-app")
+    .addDockerfile("nextjs-web", "with-jest-app")
     .withReference(fileStorage)
-    //   .withReference(gpt)
-    //   .withEnvironment("OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT", "true")
-    .withHttpEndpoint({ port: 3000, env: "PORT" })
+    .withHttpEndpoint({ targetPort: 3000, env: "PORT" })
     .withExternalHttpEndpoints();
 
   await builder.build().run();
