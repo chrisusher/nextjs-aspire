@@ -1,0 +1,19 @@
+{
+  "appHost": {
+    "path": "apphost.ts",
+    "language": "typescript/nodejs"
+  },
+  "sdk": {
+    "version": "13.3.0-preview.1.26224.2"
+  },
+  "channel": "daily",
+  "profiles": {
+    "https": {
+      "applicationUrl": "https://nextjs-aspire.dev.localhost:24794;http://nextjs-aspire.dev.localhost:49624",
+      "environmentVariables": {
+        "ASPIRE_DASHBOARD_OTLP_ENDPOINT_URL": "https://nextjs-aspire.dev.localhost:52988",
+        "ASPIRE_RESOURCE_SERVICE_ENDPOINT_URL": "https://nextjs-aspire.dev.localhost:42994"
+      }
+    }
+  }
+}
